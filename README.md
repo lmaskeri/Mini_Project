@@ -1,6 +1,6 @@
 # Computational Biology Mini Project
 
-**## Installation**
+## Installation
 
 ###In order to run this code from your current working directory, clone this repository.
 ###You can do this using the git command:
