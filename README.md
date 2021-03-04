@@ -16,14 +16,25 @@ To run the whole dataset with all paired reads, use the following command:
 ```
 python2 mini_wrapper.py whole_dataset
 ```
+## Scripts Included
+* **mini_wrapper.py** 
+* **sleuth_script.R** 
+
+## MiniProject.log Output Details
+1. Number of CDS in the HCMV genome (EF999921).
+2. Signficicant (FDR < 0.05) differentially expressed genes between the two timepoints (2pi and 6pi).
+3. Number of reads in each transcriptome before and after Bowtie2 mapping for each Donor and timepoint.
+4. The number of contigs with a length > 1000 in the SPAdes assembly.
+5. The length of the SPAdes assembly (the total number of bp in all of the contigs > 1000 bp in length).
+6. The top 10 blastn hits from using the longest contig from the SPAdes assmebly as query against a local database of sequences from the Betaherpesvirinae subfamily.
 
 ## Software Required
 * **Kallisto**
-  - Manual: https://pachterlab.github.io/kallisto/manual
+  - https://pachterlab.github.io/kallisto/manual
 * **Bowtie2**
-  - Manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+  - http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
 * **SPAdes**
-  - Manual: http://cab.spbu.ru/files/release3.12.0/manual.html
+  - http://cab.spbu.ru/files/release3.12.0/manual.html
 
 ### Packages Imported for Python
 * **os** 
@@ -33,16 +44,18 @@ python2 mini_wrapper.py whole_dataset
 * **Biopython**
   - https://biopython.org/wiki/Documentation
   - From Biopython:
-  * **Entrez**
-    - https://biopython.org/docs/1.75/api/Bio.Entrez.html
-  * **SeqIO**
-    - https://biopython.org/docs/1.75/api/Bio.SeqIO.html
+    - **Entrez**
+      - https://biopython.org/docs/1.75/api/Bio.Entrez.html
+    - **SeqIO**
+      - https://biopython.org/docs/1.75/api/Bio.SeqIO.html
 
 ### Packages Imported for R
 * **sleuth** 
   - https://www.rdocumentation.org/packages/sleuth/versions/0.27.3
 * **dplyr**
   - https://www.rdocumentation.org/packages/dplyr/versions/0.7.8
+
+
 
 
 
