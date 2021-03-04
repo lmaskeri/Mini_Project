@@ -5,7 +5,14 @@ In order to run this code from your working directory, use this git command to c
 ```
 git clone https://github.com/lmaskeri/Mini_Project.git
 ```
+
 ## Directions
+
+First change directory into the Mini_Project folder to access all files from this repository:
+```
+cd Mini_Project 
+```
+
 You can run this code with either the whole dataset, or the test dataset. 
 Running the test dataset will use the smaller fastq files cloned from the repository instead of downloading and creating them within the wrapper. To run the test dataset, use the following command:
 ```
