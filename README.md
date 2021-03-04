@@ -5,7 +5,14 @@ In order to run this code from your working directory, use this git command to c
 ```
 git clone https://github.com/lmaskeri/Mini_Project.git
 ```
+
 ## Directions
+
+First change directory into the Mini_Project folder to access all files from this repository:
+```
+cd Mini_Project 
+```
+
 You can run this code with either the whole dataset, or the test dataset. 
 Running the test dataset will use the smaller fastq files cloned from the repository instead of downloading and creating them within the wrapper. To run the test dataset, use the following command:
 ```
@@ -16,17 +23,21 @@ To run the whole dataset with all paired reads, use the following command:
 ```
 python2 mini_wrapper.py whole_dataset
 ```
+NOTE: If you want to run this script without having to be connected to the server, place "nohup" in front of either of these commands to run the program in the background.
+
 ## Scripts Included
 * **mini_wrapper.py** 
 * **sleuth_script.R** 
 
 ## MiniProject.log Output Details
+This log contains the written output from running the wrapper with all read pairs (whole_dataset). 
+
 1. Number of CDS in the HCMV genome (EF999921).
 2. Signficicant (FDR < 0.05) differentially expressed genes between the two timepoints (2pi and 6pi).
 3. Number of reads in each transcriptome before and after Bowtie2 mapping for each Donor and timepoint.
 4. The number of contigs with a length > 1000 in the SPAdes assembly.
 5. The length of the SPAdes assembly (the total number of bp in all of the contigs > 1000 bp in length).
-6. The top 10 blastn hits from using the longest contig from the SPAdes assmebly as query against a local database of sequences from the Betaherpesvirinae subfamily.
+6. The top 10 blastn hits from using the longest contig from the SPAdes assembly as query against a local database of sequences from the Betaherpesvirinae subfamily.
 
 ## Software Required
 * **Kallisto**
