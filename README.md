@@ -8,9 +8,9 @@ git clone https://github.com/lmaskeri/Mini_Project.git
 
 ## Directions
 
-First change directory into the Mini_Project folder to access all files from this repository:
+First change directory into the miniProject_Laura_Maskeri folder to access all files from the repository needed to run the python wrapper, as well as to write output files to:
 ```
-cd Mini_Project 
+cd Mini_Project/miniProject_Laura_Maskeri 
 ```
 
 You can run this code with either the whole dataset, or the test dataset. 
@@ -30,7 +30,7 @@ NOTE: If you want to run this script without having to be connected to the serve
 * **sleuth_script.R** 
 
 ## MiniProject.log Output Details
-This log contains the written output from running the wrapper with all read pairs (whole_dataset). 
+This log in the Mini_Project folder contains the written output from running the wrapper with all read pairs (whole_dataset). If the script is run using the test_dataset, there will be another MiniProject.log generated specifically for the test run within the miniProject_Laura_Maskeri folder.
 
 1. Number of CDS in the HCMV genome (EF999921).
 2. Signficicant (FDR < 0.05) differentially expressed genes between the two timepoints (2pi and 6pi).
