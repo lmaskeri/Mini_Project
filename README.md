@@ -30,12 +30,14 @@ NOTE: If you want to run this script without having to be connected to the serve
 * **sleuth_script.R** 
 
 ## MiniProject.log Output Details
+This log contains the written output from running the wrapper with all read pairs (whole_dataset). 
+
 1. Number of CDS in the HCMV genome (EF999921).
 2. Signficicant (FDR < 0.05) differentially expressed genes between the two timepoints (2pi and 6pi).
 3. Number of reads in each transcriptome before and after Bowtie2 mapping for each Donor and timepoint.
 4. The number of contigs with a length > 1000 in the SPAdes assembly.
 5. The length of the SPAdes assembly (the total number of bp in all of the contigs > 1000 bp in length).
-6. The top 10 blastn hits from using the longest contig from the SPAdes assmebly as query against a local database of sequences from the Betaherpesvirinae subfamily.
+6. The top 10 blastn hits from using the longest contig from the SPAdes assembly as query against a local database of sequences from the Betaherpesvirinae subfamily.
 
 ## Software Required
 * **Kallisto**
