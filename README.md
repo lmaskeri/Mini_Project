@@ -19,14 +19,14 @@ python2 mini_wrapper.py whole_dataset
 
 ## Software Required
 ### Packages Imported for Python
--**os** 
-  -[(https://docs.python.org/3/library/os.html)] 
--**Entrez**
-  -[https://biopython.org/docs/1.75/api/Bio.Entrez.html] 
--**SeqIO**
-  -[(https://biopython.org/docs/1.75/api/Bio.SeqIO.html)]
--**argparse**
-  -[(https://docs.python.org/3/library/argparse.html)]
+**-os** 
+https://docs.python.org/3/library/os.html
+**-Entrez**
+https://biopython.org/docs/1.75/api/Bio.Entrez.html
+**-SeqIO**
+https://biopython.org/docs/1.75/api/Bio.SeqIO.html
+**-argparse**
+https://docs.python.org/3/library/argparse.html
 
 
 
