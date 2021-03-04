@@ -23,6 +23,8 @@ To run the whole dataset with all paired reads, use the following command:
 ```
 python2 mini_wrapper.py whole_dataset
 ```
+NOTE: If you want to run this script without having to be connected to the server, place the "nohup" command in front of either of these to run the program in the background.
+
 ## Scripts Included
 * **mini_wrapper.py** 
 * **sleuth_script.R** 
