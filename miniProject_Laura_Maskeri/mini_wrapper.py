@@ -225,7 +225,7 @@ def SPAdes(SRR_list):
     #--pe1-1 myreads_1.fastq –-pe1-2 myreads_2.fastq --pe2-1 morereads_1.fastq –-pe2-2 morereads_2.fastq
     #Don't have to use all 4 kmer sizes for final run -- just keep consistant
     #For this script, I am just using k sizes of 55 and 127!
-    spades_command = " spades -k 55, 127 -t 2 --only-assembler --pe1-1 mapped_bowtie_" + srr1 + ".1.fastq --pe1-2 mapped_bowtie_" + srr1 + ".2.fastq --pe2-1 mapped_bowtie_" + srr2 + ".1.fastq --pe2-2 mapped_bowtie_" + srr2 + ".2.fastq --pe3-1 mapped_bowtie_" + srr3 + ".1.fastq --pe3-2 mapped_bowtie_" + srr3 + ".2.fastq --pe4-1 mapped_bowtie_" + srr4 + ".1.fastq --pe4-2 mapped_bowtie_" + srr4 + ".2.fastq -o spades_assembly/"
+    spades_command = " spades -k 55,127 -t 2 --only-assembler --pe1-1 mapped_bowtie_" + srr1 + ".1.fastq --pe1-2 mapped_bowtie_" + srr1 + ".2.fastq --pe2-1 mapped_bowtie_" + srr2 + ".1.fastq --pe2-2 mapped_bowtie_" + srr2 + ".2.fastq --pe3-1 mapped_bowtie_" + srr3 + ".1.fastq --pe3-2 mapped_bowtie_" + srr3 + ".2.fastq --pe4-1 mapped_bowtie_" + srr4 + ".1.fastq --pe4-2 mapped_bowtie_" + srr4 + ".2.fastq -o spades_assembly/"
     os.system(spades_command)
     with open("miniProject.log", "a") as out: #append to the log
         out.write(spades_command + "\n")
@@ -388,18 +388,18 @@ if argument.dataset_to_run == "test_dataset":
 if argument.dataset_to_run == "whole_dataset":
     #do all steps above, however add in the first step
     #this is where you retrieve the transcriptomes from two patient donors from SRA and convert to paired-end fastq files
-    get_paired_end_reads(SRR)
-    generate_transcriptome()
-    create_kallisto_index()
-    for srr in SRR:
-        run_kallisto(srr)
-    make_sleuth_table(SRR)
-    run_sleuth()
-    get_bowtie2_index()
-    for srr in SRR:
-        run_bowtie2(srr)
-    for srr in SRR:
-        count_bowtie2_reads(srr)
+   # get_paired_end_reads(SRR)
+   # generate_transcriptome()
+   # create_kallisto_index()
+   # for srr in SRR:
+   #     run_kallisto(srr)
+   # make_sleuth_table(SRR)
+   # run_sleuth()
+   # get_bowtie2_index()
+   # for srr in SRR:
+   #     run_bowtie2(srr)
+   # for srr in SRR:
+   #     count_bowtie2_reads(srr)
     SPAdes(SRR)
     count_contigs()
     length_of_assembly()
