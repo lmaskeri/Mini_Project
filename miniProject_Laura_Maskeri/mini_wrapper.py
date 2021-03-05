@@ -211,7 +211,7 @@ def count_bowtie2_reads(srr):
         donor = "Donor 3 (6dpi)"
         
     with open("miniProject.log", "a") as out: #append to the log
-        out.write(donor + " had " + str(int(total_reads_before)) + " read pairs before Bowtie2 filtering and " + str(total_reads_after) + " read pairs after." + "\n")
+        out.write(donor + " had " + str(int(total_reads_before)) + " read pairs before Bowtie2 filtering and " + str(int(total_reads_after)) + " read pairs after." + "\n")
             
 
 '''
