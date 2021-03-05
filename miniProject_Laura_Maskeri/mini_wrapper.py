@@ -388,18 +388,18 @@ if argument.dataset_to_run == "test_dataset":
 if argument.dataset_to_run == "whole_dataset":
     #do all steps above, however add in the first step
     #this is where you retrieve the transcriptomes from two patient donors from SRA and convert to paired-end fastq files
-   # get_paired_end_reads(SRR)
-   # generate_transcriptome()
-   # create_kallisto_index()
-   # for srr in SRR:
-   #     run_kallisto(srr)
-   # make_sleuth_table(SRR)
-   # run_sleuth()
-   # get_bowtie2_index()
-   # for srr in SRR:
-   #     run_bowtie2(srr)
-   # for srr in SRR:
-   #     count_bowtie2_reads(srr)
+    get_paired_end_reads(SRR)
+    generate_transcriptome()
+    create_kallisto_index()
+    for srr in SRR:
+        run_kallisto(srr)
+    make_sleuth_table(SRR)
+    run_sleuth()
+    get_bowtie2_index()
+    for srr in SRR:
+        run_bowtie2(srr)
+    for srr in SRR:
+        count_bowtie2_reads(srr)
     SPAdes(SRR)
     count_contigs()
     length_of_assembly()
