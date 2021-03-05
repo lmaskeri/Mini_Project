@@ -87,7 +87,8 @@ def generate_transcriptome():
                     out.write(str(cds_seq) + "\n") #write the sequence out as well, excluding the [' ']
 
     with open("miniProject.log", "a") as out: #append to the log
-        out.write("The HCMV genome (EF999921) has " + str(cds_count) + "CDS." + "\n")
+        out.write("The HCMV genome (EF999921) has " + str(cds_count) + " CDS." + "\n")
+        out.write("\n")
      
     
 '''
@@ -133,11 +134,12 @@ def run_sleuth():
     os.system("Rscript sleuth_script.R")
     with open("miniProject.log", "a") as out: #append to the log
         sleuth = open("sleuth_results.txt").read().split("\n")
-        for s in sleuth:
-            out.write(s + "\n")
+        for row in sleuth: #for each row
+            split_s = row.split(" ") #split by spaces
+            for sp in split_s: #for each item
+                out.write(sp + "\t") #write out tab delimited
+            out.write("\n") #new line
             
-    
-
 
 '''
 4. Using Bowtie2, create an index for HCMV (NCBI accession EF999921).
@@ -228,7 +230,8 @@ def SPAdes(SRR_list):
     spades_command = " spades -k 55,127 -t 2 --only-assembler --pe1-1 mapped_bowtie_" + srr1 + ".1.fastq --pe1-2 mapped_bowtie_" + srr1 + ".2.fastq --pe2-1 mapped_bowtie_" + srr2 + ".1.fastq --pe2-2 mapped_bowtie_" + srr2 + ".2.fastq --pe3-1 mapped_bowtie_" + srr3 + ".1.fastq --pe3-2 mapped_bowtie_" + srr3 + ".2.fastq --pe4-1 mapped_bowtie_" + srr4 + ".1.fastq --pe4-2 mapped_bowtie_" + srr4 + ".2.fastq -o spades_assembly/"
     os.system(spades_command)
     with open("miniProject.log", "a") as out: #append to the log
-        out.write(spades_command + "\n")
+        out.write("\n" + spades_command + "\n")
+        out.write("\n")
             
 
 
@@ -249,6 +252,7 @@ def count_contigs():
                 out.write(contig.format('fasta')) #write that contig's information out to a new fasta file in fasta format
     with open("miniProject.log", "a") as out: #append to the log
         out.write("There are " + str(count) + " contigs > 1000 bp in the assembly" + "\n")
+        out.write("\n")
 
     
 '''
@@ -266,6 +270,7 @@ def length_of_assembly():
         assembly_length = assembly_length + len(contig.seq) #add the # of bp from each contig using the len() function
     with open("miniProject.log","a") as out: #append to the log
         out.write("There are " + str(assembly_length) + " bp in the assembly." + "\n")
+        out.write("\n")
 
 
 '''
