@@ -182,7 +182,7 @@ def count_bowtie2_reads(srr):
     for rec in pair_2_rec:
         count2 += 1
     pair_2.close()
-    total_reads_before = count1 + count2
+    total_reads_before = (count1 + count2) / 2
 
     #now find the total reads after filtering using bowtie
     bow_pair_1 = open("mapped_bowtie_" + srr + ".1.fastq")
@@ -197,7 +197,7 @@ def count_bowtie2_reads(srr):
     for rec in bow_pair_2_rec:
         bow_count2 += 1
     bow_pair_2.close()
-    total_reads_after = bow_count1 + bow_count2
+    total_reads_after = (bow_count1 + bow_count2) / 2
 
     #determine which donor it was and dpi condition to write out to 
     donor = ''
@@ -207,7 +207,7 @@ def count_bowtie2_reads(srr):
         donor = "Donor 1 (6dpi)"
     if srr == "SRR5660044":
         donor = "Donor 3 (2dpi)"
-    else:
+    if srr == "SRR5660045":
         donor = "Donor 3 (6dpi)"
         
     with open("miniProject.log", "a") as out: #append to the log
