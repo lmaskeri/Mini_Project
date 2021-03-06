@@ -316,6 +316,8 @@ def parse_blast_results():
     rows = csv.DictReader(blast_results, headers, delimiter = ",") #using DictReader to read in each row of csv as dictionary (where header columns are the key and the values are the results for each)
     count = 0
     with open("miniProject.log", "a") as out: #append top 10 hits to the log
+        #make header row
+        out.write("sacc" + "\t" + "pident" + "\t" + "length" + "\t"  + "qstart" + "\t"  + "qend" + "\t"  + "sstart" + "\t"  + "send" + "\t"  + "bitscore" + "\t"  + "evalue" + "\t" + "stitle" + "\n")
         for row in rows:
             if count >= 9: #count used to get only top 10 hits
                 break
