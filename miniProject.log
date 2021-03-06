@@ -29,7 +29,7 @@ There are 57 contigs > 1000 bp in the assembly
 
 There are 200759 bp in the assembly.
 
-sacc  pident  length  qstart  qend  sstart  send  bitscore  evalue stitle
+sacc  pident  length  qstart  qend  sstart  send  bitscore  evalue  stitle
 EF999921.1	100.000	15888	1	15888	171116	155229	29340	0.0	EF999921.1 Human herpesvirus 5 strain TB40/E clone TB40-BAC4
 JX512204.1	100.000	15888	1	15888	138487	122600	29340	0.0	JX512204.1 Human herpesvirus 5 strain HAN16
 MT070140.1	100.000	15888	1	15888	138846	122959	29340	0.0	MT070140.1 UNVERIFIED: Human betaherpesvirus 5 isolate P10
