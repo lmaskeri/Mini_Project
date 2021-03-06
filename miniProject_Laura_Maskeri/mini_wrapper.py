@@ -5,7 +5,6 @@ import csv #importing csv to read in the blastn csv file
 import argparse
 
 
-
 '''
 1. We would like to compare HCMV transcriptomes 2- and 6-days post-infection (dpi). First, retrieve the following
 transcriptomes from two patient donors from SRA and convert to paired-end fastq files. You can use wget (by
